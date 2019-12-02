@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Guess Who?</title>
+  <link rel="stylesheet" href="lib/bootstrap/bootstrap.css" />
+  <link rel="stylesheet" href="css/app.css" />
+</head>
+
+<body>
+  <header class="box">
+    <img class ="normal" src="img/layout/1.png" />
+    <div class="title">Guess Who?</div>
+    <img class="reverse" src="img/layout/1_reversed.png" />
+  </header>
+
+  <main>
+    <section class="game-start">
+      <h2>Think of Someone...</h2>
+      <button onclick="onStartGuessing()" class="btn btn-lg btn-primary">I'm Ready!</button>
+    </section>
+    <section class="quest" style="display: none">
+      <h2></h2>
+      <button onclick="onUserResponse('yes')" class="btn btn-warning btn-lg">Yes</button>
+      <button onclick="onUserResponse('no')" class="btn btn-warning btn-lg">No</button>
+    </section>
+    <section class="new-quest" style="display: none">
+      <h2>OK, I gave up...</h2>
+
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="newGuess" class="col-sm-6 control-label">You thought of:</label>
+          <div class="col-sm-6">
+            <input name="newGuess" type="txt" class="form-control" id="newGuess" placeholder="Your Guess" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="newQuest" class="col-sm-6 control-label">Question to differentiate:</label>
+          <div class="col-sm-6">
+            <input name="newQuest" type="txt" class="form-control" id="newQuest"
+              placeholder="The answer is YES for yours" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" onclick="onAddGuess();return false;" class="btn btn-danger btn-lg">
+              Make me Stronger!
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <button id="restart" onclick="onRestartGame()" class="btn btn-lg btn-primary" style="display: none">Restart Game</button>
+
+    <div class="modal fade" id="victoryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            AH! AH! I KNEW IT!!!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="loseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          NOOO!!! Help me master! MAKE ME WISER!!!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+
+  <footer>
+    cofferight &copy; 2016
+  </footer>
+
+  <script src="lib/jquery/jquery.js"></script>
+  <script src="lib/bootstrap/bootstrap.js"></script>
+  <script src="js/storage-service.js"></script>
+  <script src="js/quest-service.js"></script>
+  <script src="js/quest-controller.js"></script>
+
+</body>
+
+</html>

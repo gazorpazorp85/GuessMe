@@ -1,0 +1,108 @@
+
+body {
+  background-image: url("../img/layout/background.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+}
+
+.normal {
+  align-self: flex-end;
+  order: 3;
+}
+
+.reverse {
+  align-self: flex-start;
+  order: 1;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color:#fcf064;
+  font-size: 3em;
+  width: 100vw;
+}
+
+.title {
+  align-self: center;
+  text-align: center;
+  background-color: rgba(11, 180, 180, 0.747);
+  border: 10px dotted #fcf064;
+  text-shadow: 0 0 5px black;
+  font-size: larger;
+  order: 2;
+  width: 30%;
+  height: 50%;
+}
+
+.gameon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color:#fcf064;
+  font-size: 3em;
+  width: 100vw;
+}
+
+footer {
+  text-align: center;
+  color:lightblue;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.game-start, 
+  .new-quest, 
+    .form-horizontal {
+  color:#fcf064;
+  text-shadow: 0 0 5px black;
+  font-size: larger;
+}
+
+#victoryModal {
+  background-color: rgba(11, 180, 180, 0.747);
+}
+
+#victoryModal .modal-body,
+  #victoryModal .modal-header, 
+    #victoryModal .modal-footer {
+  background-color: #fcf064;
+  border-color: black;
+}
+
+#victoryModal .modal-content,
+  #victoryModal .modal-dialog {
+  border-color: black;
+}
+
+#loseModal {
+  background-color: rgba(139, 0, 0, 0.5);
+  color: #fcf064;
+}
+
+#loseModal .modal-body,
+  #loseModal .modal-header, 
+    #loseModal .modal-footer {
+  background-color: darkred;
+  border-color: black;
+}
+
+#loseModal .modal-content,
+  #loseModal .modal-dialog {
+  border-color: black;
+}
