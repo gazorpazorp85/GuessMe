@@ -57,7 +57,7 @@ function rightGuess() {
 
 function wrongGuess() {
     $('.reverse').attr("src","img/layout/4resized.jpg");
-    $('body').css('background-image', 'url("../img/layout/red-background.jpg');
+    $('body').css('background-image', 'url("./img/layout/red-background.jpg');
     $("#loseModal").modal('show');
     $('.title').html('MAKE ME WISER!');
     $('.title').css('background-color', 'darkred');
@@ -75,7 +75,7 @@ function onRestartGame() {
     $('.reverse').css('align-self','flex-start');
     $('.reverse').attr("src","img/layout/1_reversed.png");
     $('#restart').hide();
-    $('body').css('background-image', 'url("../img/layout/background.jpg');
+    $('body').css('background-image', 'url("./img/layout/background.jpg');
     $('.title').css('background-color', 'rgba(11, 180, 180, 0.747)');
     setLastRes(null);
     resetQuest();
